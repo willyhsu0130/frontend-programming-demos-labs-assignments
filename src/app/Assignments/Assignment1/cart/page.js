@@ -1,13 +1,17 @@
 "use client";
-
+// import useCart to access the cart functions
 import { useCart } from "@/app/context/CartContext";
 
 const CartPage = () => {
+  // Deconstruct cart, removeFromCart functions from useCart
   const { cart, removeFromCart } = useCart()
   return (
+    <>
+    <title>Cart</title>
     <div className="p-6">
       <h1 className="text-2xl font-bold text-center">Your Cart</h1>
-
+      {/* If the cart is empty, display "your cart is empty" */}
+      {/* If not,  map through the entire cart array  */}
       {cart.length === 0 ? (
         <p className="mt-4">Your cart is empty.</p>
       ) : (
@@ -26,6 +30,7 @@ const CartPage = () => {
         </ul>
       )}
     </div>
+    </>
   );
 }
 

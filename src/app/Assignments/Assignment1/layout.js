@@ -1,10 +1,13 @@
 "use client"
+
+//import needed elements for layout
 import { CartProvider } from "@/app/context/CartContext";
 import { ShoppingCart } from 'lucide-react';
 import Link from 'next/link'
 
 const NavBar = () => {
     return (
+        // Add nav div to contain the links
         <nav className="w-full flex bg-gray-900">
             <div className="w-3/5 p-4 text-white flex justify-start space-x-20">
                 <Link href="/Assignments/Assignment1">Home</Link>
@@ -20,7 +23,7 @@ const NavBar = () => {
         </nav>
     )
 }
-
+// layout of the assignment so all pages can share the navbar
 export default function Layout({ children }) {
     return (
         <html lang="en">
@@ -30,6 +33,7 @@ export default function Layout({ children }) {
                 <div className="min-h-screen flex flex-col items-center">
                     <NavBar />
                     <main className="p-6">
+                        {/* wrap children between cartprovider so all pages can access the cart*/}
                         <CartProvider>
                             {children}
                         </CartProvider>

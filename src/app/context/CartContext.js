@@ -1,8 +1,8 @@
-"use client"; // Ensure it's a client component
+"use client"; // useState, useEffect must need "use client "
 
 import { createContext, useState, useEffect, useContext } from "react";
 
-// Create the Cart Context
+// Create the cart context for all pages to access the cart: serves as a global variable
 const CartContext = createContext();
 
 // Custom hook to use the Cart Context

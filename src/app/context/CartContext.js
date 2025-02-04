@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (index) => {
     setCart((prevCart) => prevCart.filter((_, i) => i !== index));
   };
-
+  // specify what values you want to be read from cartcontext for other components
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}

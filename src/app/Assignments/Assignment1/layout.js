@@ -1,7 +1,7 @@
 "use client"
 
 //import needed elements for layout
-import { CartProvider } from "@/app/context/CartContext";
+import { CartProvider } from "@/app/Assignments/Assignment1/CartContext";
 import { ShoppingCart } from 'lucide-react';
 import Link from 'next/link'
 

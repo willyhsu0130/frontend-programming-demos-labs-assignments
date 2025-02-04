@@ -1,6 +1,6 @@
 "use client";
 // import useCart to access the cart functions
-import { useCart } from "@/app/context/CartContext";
+import { useCart } from "@/app/Assignments/Assignment1/CartContext";
 
 const CartPage = () => {
   // Deconstruct cart, removeFromCart functions from useCart

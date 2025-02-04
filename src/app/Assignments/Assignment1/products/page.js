@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckCircle } from "lucide-react"
-import { useCart } from "@/app/context/CartContext"
+import { useCart } from "@/app/Assignments/Assignment1/CartContext"
 import { useState } from "react"
 import Image from 'next/image'
 
